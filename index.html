@@ -8,7 +8,31 @@
     <title>FED1 JS1 Lesson tasks</title>
   </head>
   <body>
-    <h1>JS1 Lesson tasks</h1>
+    <header>
+      <nav>
+        <a href="/" class="active">Home</a>
+        <a href="/search-example.html">Search</a>
+      </nav>
+    </header>
+
+    <h1 id="js-q5-h1-slot">JS1 Lesson tasks</h1>
+    <button class="heading">Change the h1</button>
+    <button class="title">Update Title</button>
+    <br />
+    <button class="like-button" id="js-like-button">Like</button>
+    <br />
+
+    <section>
+      <div class="color-picker-section">
+        <input type="color" id="js-color-picker-input" />
+        <button id="js-color-picker-button">Set Custom Color</button>
+      </div>
+
+      <button class="color-button red" data-color="red">Red</button>
+      <button class="color-button orange" data-color="orange">Orange</button>
+      <button class="color-button pink" data-color="pink">Pink</button>
+      <button class="color-button" id="js-default-color-button">default</button>
+    </section>
 
     <h2>null, Objects and arrays of objects lesson task</h2>
     <details>
@@ -167,5 +191,6 @@
     </details>
 
     <script type="module" src="/src/main.js"></script>
+    <!-- <script type="module" src="/src/lesson5.js"></script> -->
   </body>
 </html>

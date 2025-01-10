@@ -182,54 +182,107 @@ const checkIfNumber = (arg1) => {
 };
 
 // Question 4
-
-// function addition(1, "2", false)
 function addition(num1, num2, num3) {
-  let result;
+  // try and convert all the arguments to number values
+  var convertedNum1 = parseFloat(num1);
+  var convertedNum2 = parseFloat(num2);
+  var convertedNum3 = parseFloat(num3);
 
-  if (
-    typeof num1 === "boolean" ||
-    typeof num2 === "boolean" ||
-    typeof num3 === "boolean"
-  ) {
-    return invalidMessage;
+  // if any of the arguments cannot be converted to a number they will have the value NaN - Not a Number
+  // check for a NaN value using isNaN()
+  if (isNaN(convertedNum1) || isNaN(convertedNum2) || isNaN(convertedNum3)) {
+    // as soon as a return statement is encountered the function will exit
+    return "Invalid argument types";
   }
 
-  let n1 = parseFloat(num1);
-  let n2 = parseFloat(num2);
-  let n3 = parseFloat(num3);
-
-  const num1Type = typeof n1;
-  const num2Type = typeof n2;
-  const num3Type = typeof n3;
-
-  if (num1Type !== "number") {
-    debugger;
-    return invalidMessage;
-  }
-
-  checkIfNumber(num1Type);
-  checkIfNumber(num2Type);
-  checkIfNumber(num3Type);
-
-  if (num2Type !== "number") {
-    debugger;
-    return invalidMessage;
-  }
-
-  if (num3Type !== "number") {
-    debugger;
-    return invalidMessage;
-  }
-
-  return n1 + n2 + n3;
+  return convertedNum1 + convertedNum2 + convertedNum3;
 }
 
-addition(1, "2", false);
-
 console.log("first Case >>>", addition(1.554, 2, 5));
-console.log("2nd Case >>>", addition(1, "4", 8) === 13);
-console.log(
-  "3rd Case >>>",
-  addition(false, 25, 11) === "Invalid argument types"
-);
+console.log("2nd Case >>>", addition(1, "4", 8));
+console.log("3rd Case >>>", addition(false, 25, 11));
+
+// =====================
+//
+
+// Select the button with the class heading using document.querySelector.
+
+// Create a function and assign it to the onclick property of the button.
+
+// The function should select the h1 element on the page and update its innerHTML without replacing the existing value.
+
+// After clicking once, the innerHTML value should be Functions: Updated.
+
+// Clicking the button again would mean the heading reads: Functions: Updated: Updated
+
+const headingButton = document.querySelector(".heading");
+const headingElement = document.querySelector("h1");
+let count = 0;
+
+headingButton.onclick = function () {
+  console.log("clicked");
+  if (count < 3) {
+    headingElement.innerHTML = headingElement.innerHTML + ": Updated";
+    count++;
+  }
+
+  console.log(count);
+};
+
+// Question 6
+// Select the button with the class title.
+
+// When this is button is clicked, update the title of the page (not the heading, the HTML page title visible in the browser tab) to read: I've been updated.
+
+// Hint: use console.dir(document) to view the properties available on the document object.
+const titleButton = document.querySelector(".title");
+
+titleButton.onclick = function () {
+  document.title = "I've been updated";
+};
+
+// Question Bonus
+// Make the like button work
+const likeButtonEl = document.getElementById("js-like-button");
+
+likeButtonEl.onclick = function () {
+  console.log("clicked");
+  likeButtonEl.classList.toggle("is-active");
+};
+
+// Question 7
+// Select the buttons with the classes red, orange and pink.
+
+// Clicking on these buttons should change the background of the page to red, orange and pink respectively.
+
+const mainEl = document.querySelector("body");
+const redBtn = document.querySelector(".red");
+const orangeBtn = document.querySelector(".orange");
+const pinkBtn = document.querySelector(".pink");
+const defaultBtn = document.querySelector("#js-default-color-button");
+
+function changeBackground(color) {
+  mainEl.style.backgroundColor = color;
+}
+
+// redBtn.addEventListener("click", () => changeBackground("red"));
+// redBtn.addEventListener("click", () => changeBackground("orange"));
+// redBtn.addEventListener("click", () => changeBackground("pink"));
+
+[redBtn, orangeBtn, pinkBtn].forEach((button) => {
+  button.style.backgroundColor = button.dataset.color;
+  button.addEventListener("click", () =>
+    changeBackground(button.dataset.color)
+  );
+});
+
+const colorPickerBtn = document.querySelector("#js-color-picker-button");
+const colorPickerInput = document.querySelector("#js-color-picker-input");
+
+colorPickerInput.addEventListener("input", (event) => {
+  console.log("current color", event.target.value);
+});
+
+colorPickerBtn.addEventListener("click", () => {
+  mainEl.style.backgroundColor = colorPickerInput.value;
+});

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>FED1 JS1 Lesson tasks: Search Example</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/search-example.html" class="active">Search</a>
+      </nav>
+    </header>
+
+    <h1>JS1 Search Example</h1>
+
+    <section>
+      <article>
+        <h3>Search for a product</h3>
+        <input
+          type="text"
+          id="js-search-input"
+          placeholder="Search for a product"
+        />
+
+        <button id="js-search-button">Search</button>
+      </article>
+
+      <article>
+        <h3>Results</h3>
+        <ul id="js-product-list"></ul>
+      </article>
+    </section>
+
+    <script type="module" src="/src/search.js"></script>
+  </body>
+</html>

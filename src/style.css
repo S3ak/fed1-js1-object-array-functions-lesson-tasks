@@ -100,3 +100,34 @@ button:focus-visible {
 h3 {
   max-width: 66ch;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 0.2rem 0;
+  min-width: 300px;
+  width: 100%;
+
+  .active {
+    color: #f3d200;
+    text-decoration: underline;
+  }
+}
+
+.like-button.is-active {
+  background-color: hotpink;
+}
+
+.color-button {
+  background-color: attr(data-color);
+}
+
+.color-picker-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 0;
+}
