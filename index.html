@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>FED1 JS1 Lesson tasks</title>
+  </head>
+  <body>
+    <h1>JS1 Lesson tasks</h1>
+
+    <h2>null, Objects and arrays of objects lesson task</h2>
+    <details>
+      <summary>Click here to see questions</summary>
+
+      <section>
+        <article>
+          <h3>
+            Question 1: Console log the `price` property from the object below:
+          </h3>
+          Product Price is <strong id="js-q1-price">0</strong>
+        </article>
+
+        <hr />
+
+        <article>
+          <h3>
+            Question 2: Loop through the array below and console log each
+            `colour` property.
+          </h3>
+          the colors are
+          <ul id="js-q2-colors"></ul>
+        </article>
+
+        <hr />
+
+        <article>
+          <h3>
+            Question 3: Loop through the array below and console log each name
+            property only if it is on special.
+          </h3>
+          The meals on special are
+          <ul id="js-q3-meals"></ul>
+        </article>
+        <hr />
+
+        <article>
+          <h3>
+            Question 4: Loop through the array below and log each person's name
+            and surname if they are between the ages of 20 and 50 (including 20
+            and 50):
+          </h3>
+          Poeple between the ages of 20 and 50 are;
+          <ul id="js-q4-ages"></ul>
+        </article>
+
+        <hr />
+
+        <article>
+          <h3>
+            Question 5: Select the `ul` element in the HTML file, loop through
+            the array below and create a `li` element containing the product
+            name and price properties.
+          </h3>
+          The products are;
+          <ul id="js-q5-products"></ul>
+        </article>
+
+        <hr />
+      </section>
+    </details>
+
+    <h2>Introduction to Functions</h2>
+    <details open>
+      <summary>Click here to see questions</summary>
+
+      <section>
+        <article>
+          <h3>Question 1</h3>
+          <p>
+            Declare and call a function that logs the string "What the func is
+            this nonsense?"
+          </p>
+          Nonse function <strong id="js-q1-nonsense"></strong>
+        </article>
+
+        <hr />
+
+        <article>
+          <h3>Question 2</h3>
+          Create and call a function with two
+          <p>
+            arguments, firstName and lastName. The function should log both the
+            argument values with a space between them.
+          </p>
+        </article>
+
+        <hr />
+
+        <article>
+          <h3>Question 3</h3>
+          Create a function with two arguments,
+          <p>
+            firstNumber and secondNumber. Inside the function, check the type of
+            the arguments. If they are numbers, multiply them and return the
+            result. If either of them are not numbers return the message:
+            "Please supply number values". Call the function, assign the return
+            value to a variable called result and log the variable.
+          </p>
+        </article>
+        <hr />
+
+        <article>
+          <h3>Question 4</h3>
+          <p>
+            Create a function with three arguments. Try and convert each
+            argument to a number. If any of the arguments cannot be converted to
+            a number, return the message: "Invalid argument types". If all
+            arguments are numbers or can be converted to numbers, add them all
+            and return the result. Select the p element on the page and assign
+            the result of the function call to be its innerHTML value.
+          </p>
+
+          <p id="js-q4-result"></p>
+        </article>
+
+        <hr />
+
+        <article>
+          <h3>Question 5</h3>
+          <p>
+            Select the button with the class heading using
+            document.querySelector. Create a function and assign it to the
+            onclick property of the button. The function should select the h1
+            element on the page and update its innerHTML without replacing the
+            existing value. After clicking once, the innerHTML value should be
+            Functions: Updated. Clicking the button again would mean the heading
+            reads: Functions: Updated: Updated
+          </p>
+        </article>
+
+        <hr />
+
+        <article>
+          <h3>Question 6</h3>
+          <p>
+            Select the button with the class title. When this is button is
+            clicked, update the title of the page (not the heading, the HTML
+            page title visible in the browser tab) to read: I've been updated.
+            Hint: use console.dir(document) to view the properties available on
+            the document object.
+          </p>
+        </article>
+
+        <article>
+          <h3>Question 7</h3>
+          <p>
+            Select the buttons with the classes red, orange and pink. Clicking
+            on these buttons should change the background of the page to red,
+            orange and pink respectively.
+          </p>
+        </article>
+
+        <hr />
+      </section>
+    </details>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
