@@ -31,4 +31,48 @@ const products = [
   },
 ];
 
-// const productsListElement = document.querySelector("#js-product-list");
+const productsListEl = document.querySelector("#js-product-list");
+const searchInputEl = document.querySelector("#js-search-input");
+
+makeDefaultProducts();
+
+searchInputEl.addEventListener("input", (event) => {
+  console.log(event.target.value);
+
+  const filteredProducts = products.filter((product) => {
+    return product.name
+      .toLowerCase()
+      .includes(event.target.value.toLowerCase());
+  });
+
+  productsListEl.innerHTML = "";
+
+  filteredProducts.forEach((product) => {
+    productsListEl.innerHTML =
+      productsListEl.innerHTML + createProductEl(product);
+  });
+
+  console.log(filteredProducts);
+});
+
+function createProductEl(product) {
+  {
+    const productEl = `
+          <div class="c-product">
+            <h3 class="c-product_title">${product.name}</h3>
+            <p class="c-product_category">${product.category}</p>
+            <p class="c-product_price">Price: <strong>${product.price} Kr</strong></p>
+          </div>
+          <hr>
+  `;
+
+    return productEl;
+  }
+}
+
+function makeDefaultProducts() {
+  products.map((product) => {
+    productsListEl.innerHTML =
+      productsListEl.innerHTML + createProductEl(product);
+  });
+}

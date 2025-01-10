@@ -266,8 +266,8 @@ function changeBackground(color) {
 }
 
 // redBtn.addEventListener("click", () => changeBackground("red"));
-// redBtn.addEventListener("click", () => changeBackground("orange"));
-// redBtn.addEventListener("click", () => changeBackground("pink"));
+// orangeBtn.addEventListener("click", () => changeBackground("orange"));
+// pinkBtn.addEventListener("click", () => changeBackground("pink"));
 
 [redBtn, orangeBtn, pinkBtn].forEach((button) => {
   button.style.backgroundColor = button.dataset.color;
@@ -279,6 +279,7 @@ function changeBackground(color) {
 const colorPickerBtn = document.querySelector("#js-color-picker-button");
 const colorPickerInput = document.querySelector("#js-color-picker-input");
 
+// We don't need this code for the button to work
 colorPickerInput.addEventListener("input", (event) => {
   console.log("current color", event.target.value);
 });

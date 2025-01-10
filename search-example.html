@@ -20,18 +20,23 @@
     <section>
       <article>
         <h3>Search for a product</h3>
-        <input
-          type="text"
-          id="js-search-input"
-          placeholder="Search for a product"
-        />
+        <div>
+          <label for="js-search-input">Search:</label>
+          <br />
+          <input
+            type="text"
+            id="js-search-input"
+            placeholder="Search for a product"
+          />
+        </div>
 
         <button id="js-search-button">Search</button>
       </article>
 
       <article>
-        <h3>Results</h3>
-        <ul id="js-product-list"></ul>
+        <h3>Products:</h3>
+
+        <div id="js-product-list"></div>
       </article>
     </section>
 
